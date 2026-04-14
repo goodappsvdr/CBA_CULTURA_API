@@ -1,0 +1,640 @@
+{
+  "Version": 1,
+  "Hash": "Bosc/CKwjdG7kERrSBBTd4bOkAMfpBdXATadv2NQzoU=",
+  "Source": "API",
+  "BasePath": "_content/API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "API\\wwwroot",
+      "Source": "API",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\0d1378f9d4c343aa80f62521cffb0b1e.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/cultural-sites/0d1378f9d4c343aa80f62521cffb0b1e#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jevq4q8ryd",
+      "Integrity": "hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cultural-sites\\0d1378f9d4c343aa80f62521cffb0b1e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\2b5d226f723f47a08fa8e6945fc38905.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/cultural-sites/2b5d226f723f47a08fa8e6945fc38905#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jevq4q8ryd",
+      "Integrity": "hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cultural-sites\\2b5d226f723f47a08fa8e6945fc38905.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\65bf64b8482b4fa78e603d4b5f304060.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/cultural-sites/65bf64b8482b4fa78e603d4b5f304060#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jevq4q8ryd",
+      "Integrity": "hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cultural-sites\\65bf64b8482b4fa78e603d4b5f304060.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\cea721c8f4484875a2a75576546c5e34.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/cultural-sites/cea721c8f4484875a2a75576546c5e34#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jevq4q8ryd",
+      "Integrity": "hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cultural-sites\\cea721c8f4484875a2a75576546c5e34.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\f4d84a023147486b903f877cc7e1a4d2.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/cultural-sites/f4d84a023147486b903f877cc7e1a4d2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jevq4q8ryd",
+      "Integrity": "hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cultural-sites\\f4d84a023147486b903f877cc7e1a4d2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\prueba.txt",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/prueba#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o26kc1ygry",
+      "Integrity": "wKszM51qWPcsZUQB/v9coku3hcSrLuAu4pLT8sQ9kzk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\prueba.txt"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/cultural-sites/0d1378f9d4c343aa80f62521cffb0b1e.jevq4q8ryd.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\0d1378f9d4c343aa80f62521cffb0b1e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:25:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jevq4q8ryd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cultural-sites/0d1378f9d4c343aa80f62521cffb0b1e.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/0d1378f9d4c343aa80f62521cffb0b1e.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\0d1378f9d4c343aa80f62521cffb0b1e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:25:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/2b5d226f723f47a08fa8e6945fc38905.jevq4q8ryd.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\2b5d226f723f47a08fa8e6945fc38905.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:25:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jevq4q8ryd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cultural-sites/2b5d226f723f47a08fa8e6945fc38905.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/2b5d226f723f47a08fa8e6945fc38905.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\2b5d226f723f47a08fa8e6945fc38905.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:25:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/65bf64b8482b4fa78e603d4b5f304060.jevq4q8ryd.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\65bf64b8482b4fa78e603d4b5f304060.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:34:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jevq4q8ryd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cultural-sites/65bf64b8482b4fa78e603d4b5f304060.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/65bf64b8482b4fa78e603d4b5f304060.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\65bf64b8482b4fa78e603d4b5f304060.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:34:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/cea721c8f4484875a2a75576546c5e34.jevq4q8ryd.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\cea721c8f4484875a2a75576546c5e34.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:34:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jevq4q8ryd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cultural-sites/cea721c8f4484875a2a75576546c5e34.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/cea721c8f4484875a2a75576546c5e34.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\cea721c8f4484875a2a75576546c5e34.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:34:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/f4d84a023147486b903f877cc7e1a4d2.jevq4q8ryd.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\f4d84a023147486b903f877cc7e1a4d2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jevq4q8ryd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cultural-sites/f4d84a023147486b903f877cc7e1a4d2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cultural-sites/f4d84a023147486b903f877cc7e1a4d2.jpg",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\f4d84a023147486b903f877cc7e1a4d2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hXJC6R6JoAHyhG2Fux3WuXQjIq3NTVJjWJDPm9RtyiM="
+        }
+      ]
+    },
+    {
+      "Route": "images/prueba.o26kc1ygry.txt",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\prueba.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wKszM51qWPcsZUQB/v9coku3hcSrLuAu4pLT8sQ9kzk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:17:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o26kc1ygry"
+        },
+        {
+          "Name": "label",
+          "Value": "images/prueba.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wKszM51qWPcsZUQB/v9coku3hcSrLuAu4pLT8sQ9kzk="
+        }
+      ]
+    },
+    {
+      "Route": "images/prueba.txt",
+      "AssetFile": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\prueba.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wKszM51qWPcsZUQB/v9coku3hcSrLuAu4pLT8sQ9kzk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Apr 2026 17:17:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wKszM51qWPcsZUQB/v9coku3hcSrLuAu4pLT8sQ9kzk="
+        }
+      ]
+    }
+  ]
+}

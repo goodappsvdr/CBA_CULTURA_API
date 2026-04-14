@@ -1,0 +1,12 @@
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.csproj.AssemblyReference.cache
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.AssemblyInfoInputs.cache
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.AssemblyInfo.cs
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.csproj.CoreCompileInputs.cache
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\bin\Debug\net8.0\API.SERVICE.deps.json
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\bin\Debug\net8.0\API.SERVICE.dll
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\bin\Debug\net8.0\API.SERVICE.pdb
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.dll
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\refint\API.SERVICE.dll
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.pdb
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\ref\API.SERVICE.dll

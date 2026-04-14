@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\0d1378f9d4c343aa80f62521cffb0b1e.jpg",
+      "PackagePath": "staticwebassets\\images\\cultural-sites\\0d1378f9d4c343aa80f62521cffb0b1e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\2b5d226f723f47a08fa8e6945fc38905.jpg",
+      "PackagePath": "staticwebassets\\images\\cultural-sites\\2b5d226f723f47a08fa8e6945fc38905.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\65bf64b8482b4fa78e603d4b5f304060.jpg",
+      "PackagePath": "staticwebassets\\images\\cultural-sites\\65bf64b8482b4fa78e603d4b5f304060.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\cea721c8f4484875a2a75576546c5e34.jpg",
+      "PackagePath": "staticwebassets\\images\\cultural-sites\\cea721c8f4484875a2a75576546c5e34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\cultural-sites\\f4d84a023147486b903f877cc7e1a4d2.jpg",
+      "PackagePath": "staticwebassets\\images\\cultural-sites\\f4d84a023147486b903f877cc7e1a4d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Juani\\Documents\\GoodApps\\CulturaCba-API\\CulturaCordobaAPI\\wwwroot\\images\\prueba.txt",
+      "PackagePath": "staticwebassets\\images\\prueba.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
