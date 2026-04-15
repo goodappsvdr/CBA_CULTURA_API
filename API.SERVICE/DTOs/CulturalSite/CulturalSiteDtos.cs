@@ -121,3 +121,13 @@ public sealed class UpdateCulturalSiteDto
     public List<SiteLinkItemDto> Links { get; set; } = new();
     public List<SiteInfoBlockItemDto> InfoBlocks { get; set; } = new();
 }
+
+public sealed class SearchCulturalSitesDto
+{
+    public string? Q { get; set; }
+    public int? ProvinceId { get; set; }
+    public int? DepartmentId { get; set; }
+    public int? LocalityId { get; set; }
+    public int? CategoryId { get; set; }
+    public int? TagId { get; set; }
+}

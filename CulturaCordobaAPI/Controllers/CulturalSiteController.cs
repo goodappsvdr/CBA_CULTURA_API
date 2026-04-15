@@ -1,5 +1,6 @@
-﻿using API.SERVICE.DTOs.CulturalSite;
-using API.SERVICE.Services.CulturalSiteService;
+﻿using API.SERVICE.Common;
+using API.SERVICE.DTOs.CulturalSite;
+using API.SERVICE.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,9 +19,20 @@ public class CulturalSitesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetAll(
+        [FromQuery] PaginationParams pagination,
+        CancellationToken cancellationToken)
     {
-        var data = await _culturalSiteService.GetAllAsync(cancellationToken);
+        var data = await _culturalSiteService.GetAllAsync(pagination, cancellationToken);
+        return Ok(data);
+    }
+
+    [HttpGet("search")]
+    public async Task<IActionResult> Search(
+        [FromQuery] SearchCulturalSitesDto filters,
+        CancellationToken cancellationToken)
+    {
+        var data = await _culturalSiteService.SearchAsync(filters, cancellationToken);
         return Ok(data);
     }
 

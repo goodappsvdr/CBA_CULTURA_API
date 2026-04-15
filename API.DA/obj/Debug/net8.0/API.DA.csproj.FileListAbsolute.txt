@@ -15,3 +15,4 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\refint\
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.pdb
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.genruntimeconfig.cache
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\ref\API.DA.dll
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.sourcelink.json

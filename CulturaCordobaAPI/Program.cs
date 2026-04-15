@@ -4,6 +4,7 @@ using API.SERVICE.Interfaces;
 using API.SERVICE.Services.AuthService;
 using API.SERVICE.Services.CategoryService;
 using API.SERVICE.Services.CulturalSiteService;
+using API.SERVICE.Services.DashboardService;
 using API.SERVICE.Services.GeographyService;
 using API.SERVICE.Services.PublicService;
 using API.SERVICE.Services.TagService;
@@ -113,6 +114,19 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICulturalSiteService, CulturalSiteService>();
 builder.Services.AddScoped<IGeographyService, GeographyService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") 
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials();
+        });
+});
 
 var app = builder.Build();
 
@@ -125,6 +139,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();

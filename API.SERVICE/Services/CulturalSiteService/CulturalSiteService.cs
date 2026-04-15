@@ -1,10 +1,12 @@
 using API.DA.API.DA.Context.Scaffolded;
+using API.SERVICE.Common;
 using API.SERVICE.DTOs.CulturalSite;
 using API.SERVICE.Entities;
 using API.SERVICE.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace API.SERVICE.Services.CulturalSiteService;
 
@@ -19,32 +21,72 @@ public sealed class CulturalSiteService : ICulturalSiteService
         _env = env;
     }
 
-    public async Task<IReadOnlyCollection<CulturalSiteDto>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<PagedResult<CulturalSiteDto>> GetAllAsync(
+        PaginationParams pagination,
+        CancellationToken cancellationToken = default)
     {
-        return await _context.CulturalSites
+        var page = pagination.Page < 1 ? 1 : pagination.Page;
+        var pageSize = pagination.PageSize < 1 ? 20 : pagination.PageSize;
+
+        var query = _context.CulturalSites
             .AsNoTracking()
+            .OrderBy(x => x.Name);
+
+        var totalCount = await query.CountAsync(cancellationToken);
+
+        var items = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(MapToDtoExpression())
+            .ToListAsync(cancellationToken);
+
+        return new PagedResult<CulturalSiteDto>
+        {
+            Items = items,
+            TotalCount = totalCount,
+            Page = page,
+            PageSize = pageSize
+        };
+    }
+
+    public async Task<IReadOnlyCollection<CulturalSiteDto>> SearchAsync(
+        SearchCulturalSitesDto filters,
+        CancellationToken cancellationToken = default)
+    {
+        var query = _context.CulturalSites
+            .AsNoTracking()
+            .AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(filters.Q))
+        {
+            var q = filters.Q.Trim();
+
+            query = query.Where(x =>
+                x.Name.Contains(q) ||
+                (x.ShortDescription != null && x.ShortDescription.Contains(q)) ||
+                (x.Description != null && x.Description.Contains(q)) ||
+                (x.InstitutionName != null && x.InstitutionName.Contains(q)) ||
+                (x.AddressLine != null && x.AddressLine.Contains(q)));
+        }
+
+        if (filters.ProvinceId.HasValue)
+            query = query.Where(x => x.ProvinceId == filters.ProvinceId.Value);
+
+        if (filters.DepartmentId.HasValue)
+            query = query.Where(x => x.DepartmentId == filters.DepartmentId.Value);
+
+        if (filters.LocalityId.HasValue)
+            query = query.Where(x => x.LocalityId == filters.LocalityId.Value);
+
+        if (filters.CategoryId.HasValue)
+            query = query.Where(x => x.CategoryId == filters.CategoryId.Value);
+
+        if (filters.TagId.HasValue)
+            query = query.Where(x => x.CulturalSiteTags.Any(t => t.TagId == filters.TagId.Value));
+
+        return await query
             .OrderBy(x => x.Name)
-            .Select(x => new CulturalSiteDto
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Slug = x.Slug,
-                ShortDescription = x.ShortDescription,
-                Description = x.Description,
-                ImageUrl = x.ImageUrl,
-                InstitutionName = x.InstitutionName,
-                AddressLine = x.AddressLine,
-                EntryType = x.EntryType,
-                OwnershipType = x.OwnershipType,
-                Latitude = x.Latitude,
-                Longitude = x.Longitude,
-                IsFeatured = x.IsFeatured,
-                IsPublished = x.IsPublished,
-                CategoryId = x.CategoryId,
-                ProvinceId = x.ProvinceId,
-                DepartmentId = x.DepartmentId,
-                LocalityId = x.LocalityId
-            })
+            .Select(MapToDtoExpression())
             .ToListAsync(cancellationToken);
     }
 
@@ -53,27 +95,7 @@ public sealed class CulturalSiteService : ICulturalSiteService
         return await _context.CulturalSites
             .AsNoTracking()
             .Where(x => x.Id == id)
-            .Select(x => new CulturalSiteDto
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Slug = x.Slug,
-                ShortDescription = x.ShortDescription,
-                Description = x.Description,
-                ImageUrl = x.ImageUrl,
-                InstitutionName = x.InstitutionName,
-                AddressLine = x.AddressLine,
-                EntryType = x.EntryType,
-                OwnershipType = x.OwnershipType,
-                Latitude = x.Latitude,
-                Longitude = x.Longitude,
-                IsFeatured = x.IsFeatured,
-                IsPublished = x.IsPublished,
-                CategoryId = x.CategoryId,
-                ProvinceId = x.ProvinceId,
-                DepartmentId = x.DepartmentId,
-                LocalityId = x.LocalityId
-            })
+            .Select(MapToDtoExpression())
             .FirstOrDefaultAsync(cancellationToken);
     }
 
@@ -105,27 +127,7 @@ public sealed class CulturalSiteService : ICulturalSiteService
         _context.CulturalSites.Add(entity);
         await _context.SaveChangesAsync(cancellationToken);
 
-        return new CulturalSiteDto
-        {
-            Id = entity.Id,
-            Name = entity.Name,
-            Slug = entity.Slug,
-            ShortDescription = entity.ShortDescription,
-            Description = entity.Description,
-            ImageUrl = entity.ImageUrl,
-            InstitutionName = entity.InstitutionName,
-            AddressLine = entity.AddressLine,
-            EntryType = entity.EntryType,
-            OwnershipType = entity.OwnershipType,
-            Latitude = entity.Latitude,
-            Longitude = entity.Longitude,
-            IsFeatured = entity.IsFeatured,
-            IsPublished = entity.IsPublished,
-            CategoryId = entity.CategoryId,
-            ProvinceId = entity.ProvinceId,
-            DepartmentId = entity.DepartmentId,
-            LocalityId = entity.LocalityId
-        };
+        return MapToDto(entity);
     }
 
     public async Task<CulturalSiteDto?> UpdateByIdAsync(int id, UpdateCulturalSiteDto dto, CancellationToken cancellationToken = default)
@@ -161,27 +163,7 @@ public sealed class CulturalSiteService : ICulturalSiteService
 
         await _context.SaveChangesAsync(cancellationToken);
 
-        return new CulturalSiteDto
-        {
-            Id = entity.Id,
-            Name = entity.Name,
-            Slug = entity.Slug,
-            ShortDescription = entity.ShortDescription,
-            Description = entity.Description,
-            ImageUrl = entity.ImageUrl,
-            InstitutionName = entity.InstitutionName,
-            AddressLine = entity.AddressLine,
-            EntryType = entity.EntryType,
-            OwnershipType = entity.OwnershipType,
-            Latitude = entity.Latitude,
-            Longitude = entity.Longitude,
-            IsFeatured = entity.IsFeatured,
-            IsPublished = entity.IsPublished,
-            CategoryId = entity.CategoryId,
-            ProvinceId = entity.ProvinceId,
-            DepartmentId = entity.DepartmentId,
-            LocalityId = entity.LocalityId
-        };
+        return MapToDto(entity);
     }
 
     public async Task<bool> DeleteByIdAsync(int id, CancellationToken cancellationToken = default)
@@ -238,5 +220,55 @@ public sealed class CulturalSiteService : ICulturalSiteService
 
         if (File.Exists(fullPath))
             File.Delete(fullPath);
+    }
+
+    private static CulturalSiteDto MapToDto(CulturalSite entity)
+    {
+        return new CulturalSiteDto
+        {
+            Id = entity.Id,
+            Name = entity.Name,
+            Slug = entity.Slug,
+            ShortDescription = entity.ShortDescription,
+            Description = entity.Description,
+            ImageUrl = entity.ImageUrl,
+            InstitutionName = entity.InstitutionName,
+            AddressLine = entity.AddressLine,
+            EntryType = entity.EntryType,
+            OwnershipType = entity.OwnershipType,
+            Latitude = entity.Latitude,
+            Longitude = entity.Longitude,
+            IsFeatured = entity.IsFeatured,
+            IsPublished = entity.IsPublished,
+            CategoryId = entity.CategoryId,
+            ProvinceId = entity.ProvinceId,
+            DepartmentId = entity.DepartmentId,
+            LocalityId = entity.LocalityId
+        };
+    }
+
+    private static Expression<Func<CulturalSite, CulturalSiteDto>> MapToDtoExpression()
+    {
+        return x => new CulturalSiteDto
+        {
+            Id = x.Id,
+            Name = x.Name,
+            Slug = x.Slug,
+            ShortDescription = x.ShortDescription,
+            Description = x.Description,
+            ImageUrl = x.ImageUrl,
+            InstitutionName = x.InstitutionName,
+            AddressLine = x.AddressLine,
+            EntryType = x.EntryType,
+            OwnershipType = x.OwnershipType,
+            Latitude = x.Latitude,
+            Longitude = x.Longitude,
+            IsFeatured = x.IsFeatured,
+            IsPublished = x.IsPublished,
+            CategoryId = x.CategoryId,
+            ProvinceId = x.ProvinceId,
+            DepartmentId = x.DepartmentId,
+            LocalityId = x.LocalityId
+        };
     }
 }

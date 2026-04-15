@@ -10,3 +10,4 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\AP
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\refint\API.SERVICE.dll
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.pdb
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\ref\API.SERVICE.dll
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.SERVICE\obj\Debug\net8.0\API.SERVICE.sourcelink.json

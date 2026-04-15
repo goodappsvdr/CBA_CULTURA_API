@@ -155,3 +155,4 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\ref\API.dll
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\API.staticwebassets.runtime.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.sourcelink.json
