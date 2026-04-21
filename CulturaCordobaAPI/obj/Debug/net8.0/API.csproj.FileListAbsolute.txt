@@ -4,8 +4,10 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.AssemblyInfo.cs
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.sourcelink.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\appsettings.json
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\API.staticwebassets.runtime.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\API.staticwebassets.endpoints.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\API.exe
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\API.deps.json
@@ -153,6 +155,3 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.pdb
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\ref\API.dll
-C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\bin\Debug\net8.0\API.staticwebassets.runtime.json
-C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Juani\Documents\GoodApps\CulturaCba-API\CulturaCordobaAPI\obj\Debug\net8.0\API.sourcelink.json

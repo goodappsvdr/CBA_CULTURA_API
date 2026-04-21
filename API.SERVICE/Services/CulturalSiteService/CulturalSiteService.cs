@@ -1,4 +1,4 @@
-using API.DA.API.DA.Context.Scaffolded;
+﻿using API.DA.API.DA.Context.Scaffolded;
 using API.SERVICE.Common;
 using API.SERVICE.DTOs.CulturalSite;
 using API.SERVICE.Entities;
@@ -127,13 +127,70 @@ public sealed class CulturalSiteService : ICulturalSiteService
         _context.CulturalSites.Add(entity);
         await _context.SaveChangesAsync(cancellationToken);
 
-        return MapToDto(entity);
-    }
+        var siteId = entity.Id;
+        if (dto.Contacts?.Any() == true)
+        {
+            _context.SiteContacts.AddRange(dto.Contacts.Select(c => new SiteContact
+            {
+                SiteId = siteId,
+                ContactType = c.ContactType,
+                Label = c.Label,
+                Phone = c.Phone,
+                Email = c.Email,
+                AddressLine = c.AddressLine,
+                SortOrder = c.SortOrder
+            }));
+        }
+        if (dto.Schedules?.Any() == true)
+        {
+            _context.SiteSchedules.AddRange(dto.Schedules.Select(s => new SiteSchedule
+            {
+                SiteId = siteId,
+                ScheduleType = s.ScheduleType,
+                Title = s.Title,
+                Description = s.Description,
+                SortOrder = s.SortOrder
+            }));
+        }
+        if (dto.Links?.Any() == true)
+        {
+            _context.SiteLinks.AddRange(dto.Links.Select(l => new SiteLink
+            {
+                SiteId = siteId,
+                LinkType = l.LinkType,
+                Label = l.Label,
+                Url = l.Url,
+                SortOrder = l.SortOrder
+            }));
+        }
+        if (dto.InfoBlocks?.Any() == true)
+        {
+            _context.SiteInfoBlocks.AddRange(dto.InfoBlocks.Select(i => new SiteInfoBlock
+            {
+                SiteId = siteId,
+                BlockType = i.BlockType,
+                Title = i.Title,
+                Content = i.Content,
+                SortOrder = i.SortOrder
+            }));
+        }
 
+        if (dto.TagIds?.Any() == true)
+        {
+            _context.CulturalSiteTags.AddRange(dto.TagIds.Select(tagId => new CulturalSiteTag
+            {
+                CulturalSiteId = siteId,
+                TagId = tagId
+            }));
+        }
+
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return await GetByIdAsync(siteId, cancellationToken);
+    }
     public async Task<CulturalSiteDto?> UpdateByIdAsync(int id, UpdateCulturalSiteDto dto, CancellationToken cancellationToken = default)
     {
-        var entity = await _context.CulturalSites
-            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+        var entity = await _context.CulturalSites.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 
         if (entity is null)
             return null;
@@ -162,10 +219,68 @@ public sealed class CulturalSiteService : ICulturalSiteService
         entity.LocalityId = dto.LocalityId;
 
         await _context.SaveChangesAsync(cancellationToken);
+        _context.SiteContacts.RemoveRange(_context.SiteContacts.Where(x => x.SiteId == id));
+        _context.SiteSchedules.RemoveRange(_context.SiteSchedules.Where(x => x.SiteId == id));
+        _context.SiteLinks.RemoveRange(_context.SiteLinks.Where(x => x.SiteId == id));
+        _context.SiteInfoBlocks.RemoveRange(_context.SiteInfoBlocks.Where(x => x.SiteId == id));
+        _context.CulturalSiteTags.RemoveRange(_context.CulturalSiteTags.Where(x => x.CulturalSiteId == id));
 
-        return MapToDto(entity);
+        await _context.SaveChangesAsync(cancellationToken);
+
+        if (dto.Contacts?.Any() == true)
+            _context.SiteContacts.AddRange(dto.Contacts.Select(c => new SiteContact
+            {
+                SiteId = id,
+                ContactType = c.ContactType,
+                Label = c.Label,
+                Phone = c.Phone,
+                Email = c.Email,
+                AddressLine = c.AddressLine,
+                SortOrder = c.SortOrder
+            }));
+
+        if (dto.Schedules?.Any() == true)
+            _context.SiteSchedules.AddRange(dto.Schedules.Select(s => new SiteSchedule
+            {
+                SiteId = id,
+                ScheduleType = s.ScheduleType,
+                Title = s.Title,
+                Description = s.Description,
+                SortOrder = s.SortOrder
+            }));
+
+        if (dto.Links?.Any() == true)
+            _context.SiteLinks.AddRange(dto.Links.Select(l => new SiteLink
+            {
+                SiteId = id,
+                LinkType = l.LinkType,
+                Label = l.Label,
+                Url = l.Url,
+                SortOrder = l.SortOrder
+            }));
+
+        if (dto.InfoBlocks?.Any() == true)
+            _context.SiteInfoBlocks.AddRange(dto.InfoBlocks.Select(i => new SiteInfoBlock
+            {
+                SiteId = id,
+                BlockType = i.BlockType,
+                Title = i.Title,
+                Content = i.Content,
+                SortOrder = i.SortOrder
+            }));
+
+        if (dto.TagIds?.Any() == true)
+            _context.CulturalSiteTags.AddRange(dto.TagIds.Select(t => new CulturalSiteTag
+            {
+                CulturalSiteId = id,
+                TagId = t
+            }));
+
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return await GetByIdAsync(id, cancellationToken);
     }
-
+    
     public async Task<bool> DeleteByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         var entity = await _context.CulturalSites
@@ -191,7 +306,7 @@ public sealed class CulturalSiteService : ICulturalSiteService
         var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
 
         if (!allowedExtensions.Contains(extension))
-            throw new InvalidOperationException("Imagen inv�lida.");
+            throw new InvalidOperationException("Imagen inválida.");
 
         if (file.Length > 5 * 1024 * 1024)
             throw new InvalidOperationException("La imagen no puede superar los 5 MB.");
@@ -222,31 +337,6 @@ public sealed class CulturalSiteService : ICulturalSiteService
             File.Delete(fullPath);
     }
 
-    private static CulturalSiteDto MapToDto(CulturalSite entity)
-    {
-        return new CulturalSiteDto
-        {
-            Id = entity.Id,
-            Name = entity.Name,
-            Slug = entity.Slug,
-            ShortDescription = entity.ShortDescription,
-            Description = entity.Description,
-            ImageUrl = entity.ImageUrl,
-            InstitutionName = entity.InstitutionName,
-            AddressLine = entity.AddressLine,
-            EntryType = entity.EntryType,
-            OwnershipType = entity.OwnershipType,
-            Latitude = entity.Latitude,
-            Longitude = entity.Longitude,
-            IsFeatured = entity.IsFeatured,
-            IsPublished = entity.IsPublished,
-            CategoryId = entity.CategoryId,
-            ProvinceId = entity.ProvinceId,
-            DepartmentId = entity.DepartmentId,
-            LocalityId = entity.LocalityId
-        };
-    }
-
     private static Expression<Func<CulturalSite, CulturalSiteDto>> MapToDtoExpression()
     {
         return x => new CulturalSiteDto
@@ -268,7 +358,57 @@ public sealed class CulturalSiteService : ICulturalSiteService
             CategoryId = x.CategoryId,
             ProvinceId = x.ProvinceId,
             DepartmentId = x.DepartmentId,
-            LocalityId = x.LocalityId
+            LocalityId = x.LocalityId,
+
+            TagIds = x.CulturalSiteTags
+                .Select(t => t.TagId)
+                .ToList(),
+
+            Contacts = x.SiteContacts
+                .OrderBy(c => c.SortOrder)
+                .Select(c => new SiteContactItemDto
+                {
+                    Label = c.Label,
+                    ContactType = c.ContactType,
+                    Phone = c.Phone,
+                    Email = c.Email,
+                    AddressLine = c.AddressLine,
+                    SortOrder = c.SortOrder
+                })
+                .ToList(),
+
+            Schedules = x.SiteSchedules
+                .OrderBy(s => s.SortOrder)
+                .Select(s => new SiteScheduleItemDto
+                {
+                    Title = s.Title,
+                    ScheduleType = s.ScheduleType,
+                    Description = s.Description,
+                    SortOrder = s.SortOrder
+                })
+                .ToList(),
+
+            Links = x.SiteLinks
+                .OrderBy(l => l.SortOrder)
+                .Select(l => new SiteLinkItemDto
+                {
+                    Label = l.Label,
+                    LinkType = l.LinkType,
+                    Url = l.Url,
+                    SortOrder = l.SortOrder
+                })
+                .ToList(),
+
+            InfoBlocks = x.SiteInfoBlocks
+                .OrderBy(i => i.SortOrder)
+                .Select(i => new SiteInfoBlockItemDto
+                {
+                    Title = i.Title,
+                    BlockType = i.BlockType,
+                    Content = i.Content,
+                    SortOrder = i.SortOrder
+                })
+                .ToList()
         };
     }
 }

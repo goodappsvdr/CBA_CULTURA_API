@@ -3,6 +3,7 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.AssemblyInfoInputs.cache
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.AssemblyInfo.cs
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.csproj.CoreCompileInputs.cache
+C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.sourcelink.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\bin\Debug\net8.0\API.DA.deps.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\bin\Debug\net8.0\API.DA.runtimeconfig.json
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\bin\Debug\net8.0\API.DA.dll
@@ -15,4 +16,3 @@ C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\refint\
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.pdb
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.genruntimeconfig.cache
 C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\ref\API.DA.dll
-C:\Users\Juani\Documents\GoodApps\CulturaCba-API\API.DA\obj\Debug\net8.0\API.DA.sourcelink.json

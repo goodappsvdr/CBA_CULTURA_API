@@ -268,13 +268,18 @@ public sealed class PublicService : IPublicService
     }
 
     public async Task<IReadOnlyCollection<PublicCulturalSiteListDto>> SearchCulturalSitesAsync(
-    SearchPublicCulturalSitesDto filters,
-    CancellationToken cancellationToken = default)
+     SearchPublicCulturalSitesDto filters,
+     CancellationToken cancellationToken = default)
     {
         var query = _context.CulturalSites
             .AsNoTracking()
             .Where(x => x.IsPublished)
             .AsQueryable();
+        var provinceId = filters.ProvinceId is null or 0 ? null : filters.ProvinceId;
+        var departmentId = filters.DepartmentId is null or 0 ? null : filters.DepartmentId;
+        var localityId = filters.LocalityId is null or 0 ? null : filters.LocalityId;
+        var categoryId = filters.CategoryId is null or 0 ? null : filters.CategoryId;
+        var tagId = filters.TagId is null or 0 ? null : filters.TagId;
 
         if (!string.IsNullOrWhiteSpace(filters.Q))
         {
@@ -288,20 +293,21 @@ public sealed class PublicService : IPublicService
                 (x.AddressLine != null && x.AddressLine.Contains(q)));
         }
 
-        if (filters.ProvinceId.HasValue)
-            query = query.Where(x => x.ProvinceId == filters.ProvinceId.Value);
+        if (provinceId.HasValue)
+            query = query.Where(x => x.ProvinceId == provinceId.Value);
 
-        if (filters.DepartmentId.HasValue)
-            query = query.Where(x => x.DepartmentId == filters.DepartmentId.Value);
+        if (departmentId.HasValue)
+            query = query.Where(x => x.DepartmentId == departmentId.Value);
 
-        if (filters.LocalityId.HasValue)
-            query = query.Where(x => x.LocalityId == filters.LocalityId.Value);
+        if (localityId.HasValue)
+            query = query.Where(x => x.LocalityId == localityId.Value);
 
-        if (filters.CategoryId.HasValue)
-            query = query.Where(x => x.CategoryId == filters.CategoryId.Value);
+        if (categoryId.HasValue)
+            query = query.Where(x => x.CategoryId == categoryId.Value);
 
-        if (filters.TagId.HasValue)
-            query = query.Where(x => x.CulturalSiteTags.Any(t => t.TagId == filters.TagId.Value));
+        if (tagId.HasValue)
+            query = query.Where(x =>
+                x.CulturalSiteTags.Any(t => t.TagId == tagId.Value));
 
         return await query
             .OrderBy(x => x.Name)
